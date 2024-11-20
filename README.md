@@ -111,14 +111,13 @@ The **WebJaguar Inventory Checker** is a Python script designed to streamline in
 
 ```mermaid
 graph TD
-    A[Start: User Executes Script] -->|Reads| B[Input CSV File (product_id.csv)]
-    B -->|Extracts SKUs| C[Check SKU Status via WebJaguar API]
-    C -->|Sends API Request| D[WebJaguar API]
+    A[Start: User Executes Script] -->|Reads Input| B[Input CSV File]
+    B -->|Extracts SKUs| C[Check SKU Status via API]
+    C -->|Sends Request| D[WebJaguar API]
     D -->|Returns Response| E[Parse API Response]
     E -->|Extract Status| F[Write to Output CSV]
-    F -->|Save Logs| G[Log API Responses to response_log.txt]
+    F -->|Save Logs| G[Log API Responses]
     G --> H[End: Results Saved]
-
 ```
 
 ## ⚠️ Disclaimer
